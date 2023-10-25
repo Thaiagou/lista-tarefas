@@ -1,13 +1,36 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const port = 3000;
-const tarefa = require("./routes/tarefas");
-
+const express = require('express')
 const app = express()
+const port = 3000
+const buscarCerveja = require('./routes/buscarCerveja')
+
+
+
+const bodyParser = require('body-parser')
 app.use(bodyParser.json())
-app.use('/tarefas',tarefa)
+
+app.use('/cervejas', buscarCerveja)
 
 
 app.listen(port, () => {
-    console.log(`Servidor express rodando na porta: ${port}`)
+    console.log(`Servidor rodando na porta: ${port}`)
 })
+
+
+
+
+/*
+app.delete('/deletar-compra/:id', (req, res) => {
+    const id = req.params.id
+   const indiceId =  compras.findIndex(compra => 
+    compra.id == id
+  )
+
+  compras.splice(indiceId, 1)
+    res.status(200).send(compras)
+
+})
+   
+    app.put('/:id', (req, res) => {
+        const id = req.params.id
+        res.status(200).send({message: 'PUT'})
+    })*/
