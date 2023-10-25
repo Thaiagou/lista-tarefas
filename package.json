@@ -1,20 +1,22 @@
 {
-  "name": "apilistadetarefa",
+  "name": "prova",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Uma Api de cervejaria",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
-  "author": "",
+  "keywords": [
+    "NodeJs",
+    "API",
+    "cervejaria"
+  ],
+  "author": "Henrique Santos, Thiago Ortiz",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "pg": "^8.11.3"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
+    "pg": "^8.11.2"
   }
 }
